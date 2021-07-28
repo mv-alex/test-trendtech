@@ -1,6 +1,6 @@
 async function arrToString(arr) {
   if (!arr || !arr.length) {
-    return undefined;
+    return null;
   }
 
   let result = "";
