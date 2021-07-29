@@ -16,11 +16,12 @@ async function arrToString(arr) {
       result += `,${arr[i]}`;
       count = 0;
     } else {
-      if (arr[i] !== arr[i + 1] - 1 && count > 0) {
-        result += `-${arr[i]}`;
-      }
-      if (arr[i] !== arr[i + 1] - 1 && count === 0) {
-        result += `,${arr[i]}`;
+      if (arr[i] !== arr[i + 1] - 1) {
+        if (count > 0) {
+          result += `-${arr[i]}`;
+        } else {
+          result += `,${arr[i]}`;
+        }
       }
       count++;
     }
